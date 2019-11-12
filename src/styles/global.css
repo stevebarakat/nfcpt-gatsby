@@ -1,0 +1,417 @@
+/**
+ * Custom Properties
+ * aka CSS variables.
+ *
+ * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+ **/
+
+ :root {
+	/* COLORS */
+	--primary-lightest: hsl(341, 32%, 87%);
+	--primary-lighter: hsl(341, 32%, 57%);
+	--primary-light: hsl(341, 32%, 37%);
+	--primary-color: hsl(341, 32%, 27%);
+	--primary-dark: hsl(341, 33%, 17%);
+	--primary-darker: hsl(344, 31%, 7%);
+	--primary-gradient: linear-gradient(
+		to bottom,
+		hsl(341, 32%, 97%) 0%,
+		hsl(341, 32%, 93%) 25%,
+		hsl(344, 31%, 90%) 100%
+	);
+
+	--light-theme-color: #fff;
+
+	/* FONTS */
+	--primary-font-family: 'Raleway', sans-serif;
+	--secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
+		'Arial Narrow', sans-serif;
+	--base-font-size: 18px;
+	--base-line-height: 1.4;
+
+	/* OTHERS */
+	--content-width: 45rem;
+	--dropdown-symbol-width: 0.9em;
+}
+
+/**
+ * Custom Media Queries
+ * Works like Custom Properties, except for media queries.
+ *
+ * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ **/
+
+ @custom-media --narrow-menu-query screen and (max-width: 699px);
+ @custom-media --wide-menu-query screen and (min-width: 700px);
+ @custom-media --content-query screen and (min-width: 48em);
+ @custom-media --sidebar-query screen and (min-width: 60em);
+ @custom-media --mobile screen and (max-width: 700px);
+ @custom-media --desktop screen and (min-width: 1000px);
+ 
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  border-bottom: 1px solid #000;
+}
+.site-footer{
+  border-top: 1px solid #000;
+}
+.nav-item {
+  background-color: lavenderblush;
+  list-style-type: none;
+  font-family: Helvetica;
+}
+
+.flex-column{
+  display: flex;
+}
+
+.sub-menu{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #FFF;
+  z-index: 999;
+}
+
+.dropdown-item{
+  padding: 1em;
+}
+
+.hidden{
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# SERVICES
+--------------------------------------------------------------*/
+
+#services {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1.5em;
+	padding-top: 2em;
+	text-align: center;
+}
+
+.service a {
+	text-decoration: none;
+	color: var(--primary-dark);
+	& .service-icon {
+		font-size: 5em;
+		transition: all 0.25s;
+		color: var(--primary-color);
+	}
+	& .service-icon:hover {
+		font-size: 5.2em;
+		color: var(--primary-light);
+	}
+	& h2 {
+		color: var(--primary-color);
+	}
+	& p {
+		color: var(--primary-light);
+	}
+}
+
+@media (--desktop) {
+	#services {
+		grid-template-columns: repeat(4, 1fr);
+  }
+  .parallax>div{
+    background-size: 100%;
+  }
+}
+.parallax>div{
+  background-size: cover;
+  background-position: top;
+}
+.treatments>div{
+  background-size: 100%;
+  background-position: top;
+}
+@media (--mobile) {
+	#services {
+		grid-template-columns: 1fr;
+  }
+  .parallax>div{
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+/* TREATMENTS */
+
+#treatments h3,
+#treatments p {
+	z-index: 999;
+}
+
+.treatments-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	font-size: 1.5em;
+	& ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		text-align: center;
+		& li {
+			padding: 0.25em 0;
+		}
+	}
+}
+
+@media (--desktop) {
+	.treatments-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+.parallax-inner{
+  z-index: -9999;
+}
+
+.parallax-inner>div{
+  background-size:  contain !important;
+}
+
+section {
+	padding: 0 3em 3em;
+	border-top: 1px solid var(--primary-color);
+}
+
+@media (--mobile) {
+	section {
+		padding: 0 0.35em 3em;
+		& h1 {
+			font-size: 2.2em;
+		}
+	}
+}
+.section-header {
+	text-align: center;
+	padding: 2.5em 0;
+}
+
+#hero-unit .section-header {
+	color: var(--light-theme-color);
+	text-shadow: 2px 3px 4px #000;
+	text-align: center;
+	position: relative;
+	top: 4em;
+}
+
+/*--------------------------------------------------------------
+# PRICING
+--------------------------------------------------------------*/
+#pricing-plans {
+	background: var(--primary-gradient);
+	/* border-top: 80px solid hsla(0, 0%, 0%, 0.1);
+	border-bottom: 80px solid hsla(0, 0%, 0%, 0.5); */
+}
+.plans-wrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1.5em;
+	font-size: 1.25em;
+}
+
+.plan,
+.plans {
+	transition: all 0.25s;
+	border: 1px solid transparent;
+}
+
+@media (--mobile) {
+	.plan .right {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+.plans {
+	border: 1px solid hsla(341, 32%, 7%, 1);
+	padding: 1em;
+	background: hsl(341, 32%, 90%);
+	box-shadow: hsla(341, 32%, 7%, 0.5) 0 2px 6px;
+
+	& h4 {
+		line-height: 1em;
+		text-align: center;
+		margin: 0 0 0.5em 0;
+	}
+}
+
+.plan {
+	text-align: center;
+	transition: all 0.25s ease;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0.3em;
+	margin: 1em 0.5em;
+	box-shadow: 0 0 0;
+	border: 1px solid hsla(0, 0%, 20%, 0.5);
+	border-radius: 2px;
+	& span {
+		display: block;
+	}
+}
+
+.plan:hover {
+	border: 1px solid black;
+}
+
+.plan:nth-child(1n) {
+	background: hsla(341, 32%, 27%, 0.15);
+	/* border-radius: 5px; */
+}
+.plan:nth-child(2n) {
+	background: hsla(341, 32%, 27%, 0.25);
+	/* border-radius: 5px; */
+}
+
+.sticker-wrap {
+	font-size: 0.55em;
+	height: 5.5em;
+	width: 5.5em;
+	position: relative;
+	margin: 0 1em;
+}
+
+.sticker-stroke {
+	background: #fff;
+	height: 6.1em;
+	width: 6.1em;
+	border-radius: 90%;
+	position: absolute;
+	top: -0.3em;
+	left: -0.3em;
+	z-index: 1;
+}
+
+.sticker {
+	height: 5.5em;
+	width: 5.5em;
+	border-radius: 90%;
+	text-align: center;
+	position: absolute;
+	z-index: 5;
+	background: var(--primary-dark);
+}
+
+.save {
+	font-weight: 800;
+	color: #fff;
+	font-size: 1.7em;
+	position: relative;
+	top: 0.85em;
+	line-height: 0.85em;
+}
+
+.strike {
+	text-decoration: line-through;
+	font-weight: 400;
+}
+
+.new-price {
+	font-weight: 700;
+}
+.plan-length {
+	font-size: calc(var(--base-font-size) / 1.5);
+	text-align: center;
+	vertical-align: text-top;
+	white-space: nowrap;
+}
+
+@media (--desktop) {
+	.plans-wrap {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (--mobile) {
+	.plans-wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* REVIEWS */
+
+#reviews {
+	background: url('/wp-content/themes/orlandochiro/assets/images/texture.svg');
+}
+#reviews-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1em;
+	margin: 1em;
+}
+@media (--mobile) {
+	#reviews-container {
+		grid-template-columns: 1fr;
+	}
+}
+@media (--desktop) {
+	#reviews-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+.review-container {
+	display: grid;
+	background: #fff;
+	grid-template-columns: 2fr 6fr;
+	border: 1px solid #777;
+	padding: 1em;
+	line-height: 1.4em;
+}
+.review-details {
+	background: #fafafa;
+	border-radius: 4px;
+	margin: 2px;
+	font-family: Roboto, helvetica, serif;
+	font-size: 15px;
+	color: #777;
+	position: relative;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+
+.review-rating {
+	float: left;
+	padding-right: 0.5em;
+}
+.rating-star:before {
+	content: '\2605';
+	font-size: 16px;
+	line-height: 16px;
+	color: rgb(231, 113, 27);
+}
+
+.review-link {
+	color: #136aaf;
+	text-decoration: underline;
+}
+
+.review-meta {
+	justify-self: center;
+}
+.profile-photo {
+	display: block;
+	width: 85px;
+	height: auto;
+	padding: 0 0.5em 0 0;
+}
+.author-name {
+	color: #427fed;
+	font-weight: bold;
+	line-height: 1em;
+	padding-bottom: 0.25em;
+}
+.review-date {
+	padding-bottom: 0.25em;
+}
