@@ -1,6 +1,7 @@
 import React from 'react'
 import { ParallaxBanner } from 'react-scroll-parallax';
 import Tagline from './Tagline'
+import './Treatments.css'
 
 const Treatments = () => {
   return(

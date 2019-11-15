@@ -1,0 +1,182 @@
+/**
+ * Custom Properties
+ * aka CSS variables.
+ *
+ * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+ **/
+
+ :root {
+	/* COLORS */
+	--primary-lightest: hsl(341, 32%, 87%);
+	--primary-lighter: hsl(341, 32%, 57%);
+	--primary-light: hsl(341, 32%, 37%);
+	--primary-color: hsl(341, 32%, 27%);
+	--primary-dark: hsl(341, 33%, 17%);
+	--primary-darker: hsl(344, 31%, 7%);
+	--primary-gradient: linear-gradient(
+		to bottom,
+		hsl(341, 32%, 97%) 0%,
+		hsl(341, 32%, 93%) 25%,
+		hsl(344, 31%, 90%) 100%
+	);
+
+	--light-theme-color: #fff;
+
+	/* FONTS */
+	--primary-font-family: 'Raleway', sans-serif;
+	--secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
+		'Arial Narrow', sans-serif;
+	--base-font-size: 18px;
+	--base-line-height: 1.4;
+
+	/* OTHERS */
+	--content-width: 45rem;
+	--dropdown-symbol-width: 0.9em;
+}
+
+/**
+ * Custom Media Queries
+ * Works like Custom Properties, except for media queries.
+ *
+ * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ **/
+
+ @custom-media --narrow-menu-query screen and (max-width: 699px);
+ @custom-media --wide-menu-query screen and (min-width: 700px);
+ @custom-media --content-query screen and (min-width: 48em);
+ @custom-media --sidebar-query screen and (min-width: 60em);
+ @custom-media --mobile screen and (max-width: 700px);
+ @custom-media --desktop screen and (min-width: 1000px);
+ 
+
+/* MAP */
+
+#directions {
+	padding: 0;
+	margin-bottom: 0.5em;
+	background: hsl(210, 8%, 95%);
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer{
+  border-top: 1px solid #000;
+	font-family: var(--secondary-font-family);
+	& a {
+		color: white;
+	}
+}
+.site-info {
+	border-top: 1px solid var(--light-theme-color);
+	text-align: right;
+	padding: 0.25em 1em;
+	font-size: calc(var(--base-font-size) / 1.5);
+}
+/*
+	Footer 1
+-------------------------------------------------------*/
+.cta {
+	font-size: calc(var(--base-font-size) * 0.9);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	& a {
+		text-decoration: none;
+		& .linkarea {
+			border-bottom: 1px solid var(--light-theme-color);
+			position: relative;
+			padding: 1em 0 1em 1em;
+			cursor: pointer;
+			-webkit-transition: all 0.5s;
+			transition: all 0.5s;
+			border-right: 1px solid var(--light-theme-color);
+			& strong {
+				margin-top: 5px;
+				padding-left: 1.6em;
+				letter-spacing: 3px;
+			}
+			& span {
+				font-weight: 300;
+				display: block;
+				& .fa {
+					margin-right: 5px;
+				}
+			}
+		}
+		& .linkarea:hover {
+			background-color: var(--light-theme-color);
+			color: var(--primary-color);
+		}
+	}
+}
+@media (--desktop) {
+	.cta {
+		font-size: 1.5em;
+	}
+}
+@media (--mobile) {
+	.cta {
+		font-size: 1.5em;
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.cta a .linkarea {
+		border-right: none;
+		padding-left: 0;
+		margin-left: -1em;
+	}
+}
+/*--------------------------------------------------------------
+# Footer Widgets
+--------------------------------------------------------------*/
+
+.footer_widgets-area {
+	font-size: calc(var(--base-font-size) / 1.25);
+	font-family: var(--secondary-font-family);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1em;
+}
+
+.footer_widgets-area .widget {
+	border-bottom: 1px solid var(--light-theme-color);
+	padding: 2em 0 2em 2em;
+}
+
+@media (--mobile) {
+	.footer_widgets-area .widget {
+		padding: 2em 0;
+	}
+}
+
+.site-footer {
+	background: var(--primary-dark);
+	color: var(--light-theme-color);
+}
+.site-footer ul {
+	list-style: none;
+	padding-left: 0;
+}
+.footer_widgets-area section:nth-of-type(2n) ul li {
+	padding: 0.25em 0;
+}
+
+.site-footer ul li a {
+	text-decoration: none;
+}
+
+.site-footer .svg-inline--fa {
+	margin-right: 0.25em;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+@media (--mobile) {
+	.footer_widgets-area {
+		grid-template-columns: repeat(1, 1fr);
+		text-align: center;
+	}
+}

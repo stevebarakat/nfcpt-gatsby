@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import './Services.css'
 
 const Services = () => (
   <StaticQuery

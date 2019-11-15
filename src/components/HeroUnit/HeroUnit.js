@@ -3,7 +3,7 @@ import LazyHero from 'react-lazy-hero';
 
 const HeroUnit = () => {
   return (
-    <div>
+    <section id="hero-unit" >
         <LazyHero 
           imageSrc="./spa.jpg"
           opacity={0}
@@ -18,7 +18,7 @@ const HeroUnit = () => {
         </LazyHero>
 
         {/* ... */}
-    </div>
+    </section>
 );
 }
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import './Treatments.css'
+
 
 const Tagline = () => (
   <section id=" treatments">
