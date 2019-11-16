@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
+import {NavDropdown} from 'bootstrap/dist/css/bootstrap.min.css'
 import "../styles/reset.css"
 import "../styles/global.css"
 import '../styles/font-awesome/all/all.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import SEO from "../components/seo"
 import Layout from "../components/Layout/Layout"
 import Treatments from '../components/Treatments/Treatments'
@@ -23,7 +23,6 @@ export default ({ data }) => {
       <Reviews />
       <Map />
     </Layout>
-    
   )
 }
 

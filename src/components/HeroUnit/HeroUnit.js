@@ -7,9 +7,9 @@ const HeroUnit = () => {
         <LazyHero 
           imageSrc="./spa.jpg"
           opacity={0}
-          parallaxOffset={100}
+          parallaxOffset={75}
           className="parallax"
-          minHeight="300px"
+          minHeight="400px"
         >
             <div className="section-header">
               <h1>Orange Park Chiropractor</h1>

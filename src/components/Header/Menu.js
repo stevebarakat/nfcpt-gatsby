@@ -1,13 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import {
-  Nav,
-  Navbar,
-  NavDropdown,
-  Button,
-  Form,
-  FormControl,
-} from "react-bootstrap"
+import { Nav, Navbar, NavDropdown } from "react-bootstrap"
 
 const Menu = () => (
   <StaticQuery
