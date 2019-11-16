@@ -5,7 +5,7 @@ const HeroUnit = () => {
   return (
     <section id="hero-unit" >
         <LazyHero 
-          imageSrc="./spa.jpg"
+          imageSrc= "./spa.jpg"
           opacity={0}
           parallaxOffset={75}
           className="parallax"
