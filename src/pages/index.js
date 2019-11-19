@@ -16,9 +16,9 @@ import Reviews from '../components/Reviews/Reviews'
 export default ({ data }) => {
   return (
     <Layout>
-      <HeroUnit />
+      {/* <HeroUnit /> */}
       <Services />
-      <Treatments />
+      {/* <Treatments /> */}
       <PricingPlans />
       <Reviews />
       <Map />
