@@ -70,6 +70,20 @@ section {
 	text-shadow: 2px 3px 4px #000;
 }
 
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+  background: none;
+}
+
+#custom_html-2 a:hover{
+  color: white;
+}
+
+#custom_html-2 i {
+  padding-right: .35em;
+  vertical-align: middle;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/

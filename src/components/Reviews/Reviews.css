@@ -104,7 +104,8 @@
 
 .review-link {
 	color: #136aaf;
-	text-decoration: underline;
+  text-decoration: underline;
+  border: none;
 }
 
 .review-meta {

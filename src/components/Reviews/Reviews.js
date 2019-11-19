@@ -6,6 +6,7 @@ class Reviews extends Component {
     super()
     this.state = {
       reviews: [],
+      reviewsContent: []
     }
   }
 
@@ -15,9 +16,19 @@ class Reviews extends Component {
     )
       .then(response => response.json())
       .then(response => {
-        this.setState({
-          reviews: response.result.reviews,
+        const reviews = response.result.reviews
+        console.log(reviews)
+        let reviewsContent = [];
+        reviews.map((review) => {
+          reviewsContent.push(review.text)
         })
+        console.log(reviewsContent)
+        for(let i = 0; i < reviewsContent.length; i++){
+          this.setState({
+            reviews: reviews,
+            reviewsContent: reviewsContent
+          })
+        }
       })
   }
 
@@ -32,57 +43,57 @@ class Reviews extends Component {
 
   readMore = e => {
     e.preventDefault()
-    console.log(e.target)
-    e.target.parentElement.innerHTML="ubu"
+    console.log(e.target.parentNode.id)
+    e.target.parentElement.innerHTML=this.state.reviewsContent[e.target.parentNode.id]
   }
 
   render() {
     return (
       <section id="reviews">
-        <div class="section-header">
-          <h3>Read Reviews</h3>
-          <p>Hear what others have to say.</p>
-        </div>
+      <div class="section-header">
+      <h3>Read Reviews</h3>
+      <p>Hear what others have to say.</p>
+      </div>
         <div id="reviews-container">
-          {this.state.reviews.map(review => {
+          {this.state.reviews.map((review, i) => {
             const str = review.text
             const shortStr = this.shortenString( str )
             return(
-            <div class="review-container">
-              <div class="review-meta">
+            <div key={i} className="review-container">
+              <div className="review-meta">
                 <img
-                  class="profile-photo"
+                  className="profile-photo"
                   src={review.profile_photo_url}
                   alt=""
                 />
               </div>
-              <div class="review-details">
-                <div class="author-name">{review.author_name}</div>
-                <div class="review-date">
+              <div className="review-details">
+                <div className="author-name">{review.author_name}</div>
+                <div className="review-date">
                   {review.relative_time_description}
                 </div>
-                <div class="review-rating">
-                  <span class="rating-star"></span>
-                  <span class="rating-star"></span>
-                  <span class="rating-star"></span>
-                  <span class="rating-star"></span>
-                  <span class="rating-star"></span>
+                <div className="review-rating">
+                  <span className="rating-star"></span>
+                  <span className="rating-star"></span>
+                  <span className="rating-star"></span>
+                  <span className="rating-star"></span>
+                  <span className="rating-star"></span>
                 </div>
-                <div id="rc-0" class="review-content">
+                <div id={i} className="review-content">
                   {shortStr}
-                  <a 
-                    class="review-link" 
+                  <button 
+                    className="review-link" 
                     href="#"
                     onClick={this.readMore}
                   >
                     read more
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           )})}
         </div>
-      </section>
+        </section>
     )
   }
 }
