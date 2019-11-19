@@ -17,7 +17,37 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/html/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/page-data/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/app-data/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/static/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+          "/js/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+          "/css/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,10 +60,10 @@ module.exports = {
       options: {
         fonts: [
           `limelight`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: "swap",
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -58,18 +88,15 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        includedRoutes: [
-          '/*/*/pages',
-         '/*/*/menus'
-      ],
-      excludedRoutes: [
-        '/*/*/categories',
-        '/*/*/posts',
-        '/*/*/media',
-        '/*/*/tags',
-        '/*/*/taxonomies',
-        '/*/*/users',
-      ],
+        includedRoutes: ["/*/*/pages", "/*/*/menus"],
+        excludedRoutes: [
+          "/*/*/categories",
+          "/*/*/posts",
+          "/*/*/media",
+          "/*/*/tags",
+          "/*/*/taxonomies",
+          "/*/*/users",
+        ],
         /*
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
          * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
@@ -88,7 +115,7 @@ module.exports = {
         searchAndReplaceContentUrls: {
           sourceUrl: "https://northfloridachiropracticphysicaltherapy.com",
           replacementUrl: "http://localhost:8000",
-        }
+        },
       },
     },
   ],
