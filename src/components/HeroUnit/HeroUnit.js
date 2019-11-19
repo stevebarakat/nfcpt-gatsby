@@ -1,11 +1,12 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
+import spa from './spa.jpg'
 
 const HeroUnit = () => {
   return (
     <section id="hero-unit" >
         <LazyHero 
-          imageSrc= "./spa.jpg"
+          imageSrc={spa}
           opacity={0}
           parallaxOffset={75}
           className="parallax"

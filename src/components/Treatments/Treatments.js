@@ -2,13 +2,14 @@ import React from 'react'
 import { ParallaxBanner } from 'react-scroll-parallax';
 import Tagline from './Tagline'
 import './Treatments.css'
+import './treatments.jpg'
 
 const Treatments = () => {
   return(
     <ParallaxBanner
     layers={[
         {
-            image:'./treatments.jpg',
+            image: 'treatments.jpg',
             amount: 1,
         },
     ]}
