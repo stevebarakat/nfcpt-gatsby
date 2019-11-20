@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `North Florida Chiropractic Physical Therapy`,
+        short_name: `NFCPT`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
@@ -17,37 +17,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/html/*": [
-            "cache-control: public, max-age=0, must-revalidate"
-          ],
-          "/page-data/*": [
-            "cache-control: public, max-age=0, must-revalidate"
-          ],
-          "/app-data/*": [
-            "cache-control: public, max-age=0, must-revalidate"
-          ],
-          "/static/*": [
-            "cache-control: public, max-age=31536000, immutable"
-          ],
-          "/js/*": [
-            "cache-control: public, max-age=31536000, immutable"
-          ],
-          "/css/*": [
-            "cache-control: public, max-age=31536000, immutable"
-          ],
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -117,5 +86,37 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/html/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/page-data/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/app-data/*": [
+            "cache-control: public, max-age=0, must-revalidate"
+          ],
+          "/static/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+          "/js/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+          "/css/*": [
+            "cache-control: public, max-age=31536000, immutable"
+          ],
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
+    `gatsby-plugin-offline`
   ],
 }
