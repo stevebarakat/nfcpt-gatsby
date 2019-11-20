@@ -1,6 +1,6 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
-import spa from './spa.jpg'
+import spa from '../../images/spa.jpg'
 
 const HeroUnit = () => {
   return (
@@ -22,5 +22,6 @@ const HeroUnit = () => {
     </section>
 );
 }
+
 
 export default HeroUnit

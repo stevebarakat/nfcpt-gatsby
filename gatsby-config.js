@@ -24,18 +24,23 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `limelight`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
-        ],
-        display: "swap",
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Roboto',
+            variants: ['200', '400', '500', '600', '700'],
+          },
+          {
+            family: 'Raleway',
+            variants: ['200', '400', '500', '600', '700'],
+          }
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
