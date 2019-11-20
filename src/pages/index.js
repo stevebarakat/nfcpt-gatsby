@@ -20,8 +20,8 @@ export default ({ data }) => {
       <Services />
       <Treatments />
       <PricingPlans />
-      {/* <Reviews /> */}
-      {/* <Map /> */}
+      <Reviews />
+      <Map />
     </Layout>
   )
 }
