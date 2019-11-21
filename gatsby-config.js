@@ -29,6 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
+        fontDisplay: 'swap',
         fonts: [
           {
             family: 'Roboto',
