@@ -1,6 +1,6 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
-import spa from '../../images/spa.webp'
+import spa from '../../images/spa.jpf'
 
 const HeroUnit = () => {
   return (
