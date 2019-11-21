@@ -75,7 +75,7 @@ module.exports = {
         useACF: true,
         searchAndReplaceContentUrls: {
           sourceUrl: "https://northfloridachiropracticphysicaltherapy.com",
-          replacementUrl: "http://localhost:8000",
+          replacementUrl: "https://localhost:8000",
         },
       },
     },
