@@ -27,16 +27,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          // `Raleway\:400,700`,
-          // `Roboto\:400,700` 
-        ],
-        display: 'swap'
-      }
-    },
-    {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require(`postcss-cssnext`)],

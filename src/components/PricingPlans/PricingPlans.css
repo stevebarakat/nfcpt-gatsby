@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900|Roboto:400,500,700,900&display=swap');
-
-/**
- * Custom Properties
- * aka CSS variables.
- *
- * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
- **/
-
- :root {
+:root {
 	/* COLORS */
 	--primary-lightest: hsl(341, 32%, 87%);
 	--primary-lighter: hsl(341, 32%, 57%);
@@ -50,8 +41,8 @@
  @custom-media --mobile screen and (max-width: 700px);
  @custom-media --desktop screen and (min-width: 1000px);
  
-
-/*--------------------------------------------------------------
+ 
+ /*--------------------------------------------------------------
 # PRICING
 --------------------------------------------------------------*/
 #pricing-plans {
