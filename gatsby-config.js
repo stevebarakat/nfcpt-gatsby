@@ -39,7 +39,7 @@ module.exports = {
           `Raleway\:400,500,600`,
           `Roboto\:500,700` 
         ],
-        display: 'swap'
+        display: 'block'
       }
     },
     {
