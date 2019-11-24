@@ -27,20 +27,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fontDisplay: 'swap',
         fonts: [
-          {
-            family: 'Roboto',
-            variants: ['200', '400', '500', '600', '700'],
-          },
-          {
-            family: 'Raleway',
-            variants: ['200', '400', '500', '600', '700'],
-          }
+          // `Raleway\:400,700`,
+          // `Roboto\:400,700` 
         ],
-      },
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-plugin-postcss`,
