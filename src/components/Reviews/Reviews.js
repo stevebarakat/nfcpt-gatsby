@@ -75,7 +75,7 @@ const Reviews = () => {
                 </div>
                 <div id={i} className="review-content">
                   {shortStr}
-                  <button className="review-link" href="#" onClick={readMore}>
+                  <button className="review-link" onClick={readMore}>
                     read more
                   </button>
                 </div>
