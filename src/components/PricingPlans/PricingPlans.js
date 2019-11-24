@@ -26,12 +26,12 @@ const PricingPlans = () => (
     `}
     render={data => {
       const listPricingPlans = data.allWordpressAcfPages.nodes[0].acf.plan.map(
-        plan => {
+        (plan, id) => {
           return (
-                <div className="plans">
+                <div key={id} className="plans">
                   <h4>{plan.plan_title}</h4>
-                  {plan.tier.map( item => (
-                    <div className="plan">
+                  {plan.tier.map( (item, id) => (
+                    <div key={id} className="plan">
                     <div className="left">
                       <span className="visits">{item.visits} Visits</span>{" "}
                       <span className="plan-length">{item.length}</span>

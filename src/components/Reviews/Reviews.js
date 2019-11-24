@@ -45,7 +45,7 @@ const Reviews = () => {
   }
   return (
     <section id="reviews">
-      <div class="section-header">
+      <div className="section-header">
         <h3>Read Reviews</h3>
         <p>Hear what others have to say.</p>
       </div>

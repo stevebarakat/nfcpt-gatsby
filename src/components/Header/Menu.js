@@ -30,15 +30,14 @@ const Menu = () => (
     `}
     render={data => {
       return (
-        <>
           <Navbar bg="light" expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 {data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
-                    prop => {
+                    (prop, id) => {
                       return (
-                        <>
+                        <div key={id}>
                           {prop.url === "#" ? (
                             <NavDropdown
                               title={prop.title}
@@ -46,8 +45,8 @@ const Menu = () => (
                             >
                               {prop &&
                                 prop.wordpress_children &&
-                                prop.wordpress_children.map(child => (
-                                  <NavDropdown.Item href={child.url}>
+                                prop.wordpress_children.map((child) => (
+                                  <NavDropdown.Item key={child.url} href={child.url}>
                                     {child.title}
                                   </NavDropdown.Item>
                                 ))}
@@ -55,14 +54,13 @@ const Menu = () => (
                           ) : (
                             <Nav.Link href={prop.url}>{prop.title}</Nav.Link>
                           )}
-                        </>
+                        </div>
                       )
                     }
                   )}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-        </>
       )
     }}
   />

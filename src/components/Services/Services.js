@@ -22,9 +22,9 @@ const Services = () => (
       }
     `}
     render={data => {
-      const listServices = data.allWordpressAcfPages.nodes[0].acf.service.map( service => {
+      const listServices = data.allWordpressAcfPages.nodes[0].acf.service.map( (service, id) => {
         return(
-          <div className="service">
+          <div key={id} className="service">
             <a href={service.service_link} alt={service.service_title}>
               <div className="service-icon">
                 <i className={service.service_icon} aria-hidden="true"></i>

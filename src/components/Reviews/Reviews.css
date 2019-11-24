@@ -75,7 +75,7 @@
   background: #fafafa;
   border-radius: 4px;
   margin: 2px;
-  font-family: Roboto, helvetica, serif;
+  font-family: var(--secondary-font-family);
   font-size: 15px;
   color: #777;
   position: relative;
@@ -98,6 +98,7 @@
   color: #136aaf;
   text-decoration: underline;
   border: none;
+  font-size: 1em;
 }
 
 .review-meta {

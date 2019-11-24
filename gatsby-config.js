@@ -33,6 +33,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Raleway\:400,500,600`,
+          `Roboto\:500,700` 
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         includedRoutes: ["/*/*/pages", "/*/*/media", "/*/*/menus"],

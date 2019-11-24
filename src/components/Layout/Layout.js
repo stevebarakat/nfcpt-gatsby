@@ -6,15 +6,7 @@ import Footer from "../Footer/Footer"
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+ 
 
   return (
     <>
