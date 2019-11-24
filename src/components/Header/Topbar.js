@@ -23,7 +23,7 @@ const Topbar = () => (
 			<span>Save up to 30%</span>
 		</div>
 	</a>
-	<a className="" href="#">
+	<a className="" href="/">
 		<div className="ph2_info">
 			<i className="far fa-clock"></i>
 			<strong>Office Hours</strong>

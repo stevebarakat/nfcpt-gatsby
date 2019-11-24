@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import './Footer.css'
 
@@ -125,8 +124,8 @@ const Footer = () => {
         <div className="site-info">
           <p>
             &copy; {new Date().getFullYear()} North Florida Chiropractic
-            Physical Therapy <span> | </span> Site by: <a href="#">S.Barakat</a>
-            <Link to="https://www.gatsbyjs.org">Gatsby</Link>
+            Physical Therapy <span> | </span> Site by: <a href="http://stevebarakat.com">S.Barakat</a>
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
           </p>
         </div>
       </footer>

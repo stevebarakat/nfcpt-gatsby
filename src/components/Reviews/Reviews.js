@@ -14,9 +14,7 @@ const Reviews = () => {
     const data = await response.json()
     const reviews = data.result.reviews
     let reviewsContent = []
-    reviews.map(review => {
-      reviewsContent.push(review.text)
-    })
+    reviews.map(review => reviewsContent.push(review.text))
     for (let i = 0; i < reviewsContent.length; i++) {
       setState({
         reviews: reviews,
@@ -28,11 +26,12 @@ const Reviews = () => {
     getData()
   }, [])
 
-  const shortenString = str => {
-    if (str.length > 125) {
-      str = str.slice(0, 125)
+  const shortenString = string => {
+    let str = '';
+    if (string.length > 125) {
+      str = string.slice(0, 125)
     } else {
-      str = str
+      str = string
     }
     return str
   }

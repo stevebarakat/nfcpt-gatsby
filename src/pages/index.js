@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import "../styles/reset.css"
 import "../styles/global.css"
 import '../styles/font-awesome/all/all.min.css'
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 import Layout from "../components/Layout/Layout"
 import Treatments from '../components/Treatments/Treatments'
 import HeroUnit from '../components/HeroUnit/HeroUnit'
