@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { Component } from "react"
 import './Reviews.css'
 
-const Reviews = () => {
+class Reviews extends Component {
+  constructor() {
+    super()
+    this.state = {
+      reviews: [],
+      reviewsContent: []
+    }
+  }
 
-  const [state, setState] = useState({
-    reviews: [],
-    reviewsContent: []
-  })
-
-  useEffect( () => {
+  componentDidMount() {
     fetch(
       "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJU_OKSH_D5YgRFLhOcB3Ru1c&fields=name,reviews,rating,formatted_phone_number&key=AIzaSyCZNXNCNGCISImN_bupjPe-pZft6y7pkxw"
     )
@@ -22,28 +24,30 @@ const Reviews = () => {
         })
         console.log(reviewsContent)
         for(let i = 0; i < reviewsContent.length; i++){
-          setState({
+          this.setState({
             reviews: reviews,
             reviewsContent: reviewsContent
           })
         }
       })
-},[])
-
-const shortenString = ( str ) => {
-  if ( str.length > 125 ) {
-    str = str.slice( 0, 125 );
-  } else {
-    str = str
   }
-  return str
-}
 
-const readMore = e => {
-  e.preventDefault()
-  console.log(e.target.parentNode.id)
-  e.target.parentElement.innerHTML=state.reviewsContent[e.target.parentNode.id]
-}
+  shortenString = ( str ) => {
+		if ( str.length > 125 ) {
+			str = str.slice( 0, 125 );
+		} else {
+			str = str
+		}
+		return str
+	}
+
+  readMore = e => {
+    e.preventDefault()
+    console.log(e.target.parentNode.id)
+    e.target.parentElement.innerHTML=this.state.reviewsContent[e.target.parentNode.id]
+  }
+
+  render() {
     return (
       <section id="reviews">
       <div class="section-header">
@@ -51,9 +55,9 @@ const readMore = e => {
       <p>Hear what others have to say.</p>
       </div>
         <div id="reviews-container">
-          {state.reviews.map((review, i) => {
+          {this.state.reviews.map((review, i) => {
             const str = review.text
-            const shortStr = shortenString( str )
+            const shortStr = this.shortenString( str )
             return(
             <div key={i} className="review-container">
               <div className="review-meta">
@@ -80,7 +84,7 @@ const readMore = e => {
                   <button 
                     className="review-link" 
                     href="#"
-                    onClick={readMore}
+                    onClick={this.readMore}
                   >
                     read more
                   </button>
@@ -91,7 +95,7 @@ const readMore = e => {
         </div>
         </section>
     )
- 
+  }
 }
 
 export default Reviews
