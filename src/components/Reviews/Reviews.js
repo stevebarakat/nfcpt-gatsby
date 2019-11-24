@@ -28,26 +28,6 @@ const Reviews = () => {
     getData()
   }, [])
 
-  fetch(
-    "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJU_OKSH_D5YgRFLhOcB3Ru1c&fields=name,reviews,rating,formatted_phone_number&key=AIzaSyCZNXNCNGCISImN_bupjPe-pZft6y7pkxw"
-  )
-    .then(response => response.json())
-    .then(response => {
-      const reviews = response.result.reviews
-      console.log(reviews)
-      let reviewsContent = []
-      reviews.map(review => {
-        reviewsContent.push(review.text)
-      })
-      console.log(reviewsContent)
-      for (let i = 0; i < reviewsContent.length; i++) {
-        setState({
-          reviews: reviews,
-          reviewsContent: reviewsContent,
-        })
-      }
-    })
-
   const shortenString = str => {
     if (str.length > 125) {
       str = str.slice(0, 125)
