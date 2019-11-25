@@ -82,7 +82,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.youtube.com/"
+                    href="https://www.stevebarakat.com/"
                     title="Subscribe to our YouTube channel"
                   >
                     <i className="fab fa-youtube fa-2x"></i>YouTube
