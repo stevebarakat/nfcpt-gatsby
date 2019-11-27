@@ -1,30 +1,32 @@
+@import "bootstrap.css";
+
 :root {
-	/* COLORS */
-	--primary-lightest: hsl(341, 32%, 87%);
-	--primary-lighter: hsl(341, 32%, 57%);
-	--primary-light: hsl(341, 32%, 37%);
-	--primary-color: hsl(341, 32%, 27%);
-	--primary-dark: hsl(341, 33%, 17%);
-	--primary-darker: hsl(344, 31%, 7%);
-	--primary-gradient: linear-gradient(
-		to bottom,
-		hsl(341, 32%, 97%) 0%,
-		hsl(341, 32%, 93%) 25%,
-		hsl(344, 31%, 90%) 100%
-	);
+  /* COLORS */
+  --primary-lightest: hsl(341, 32%, 87%);
+  --primary-lighter: hsl(341, 32%, 57%);
+  --primary-light: hsl(341, 32%, 37%);
+  --primary-color: hsl(341, 32%, 27%);
+  --primary-dark: hsl(341, 33%, 17%);
+  --primary-darker: hsl(344, 31%, 7%);
+  --primary-gradient: linear-gradient(
+    to bottom,
+    hsl(341, 32%, 97%) 0%,
+    hsl(341, 32%, 93%) 25%,
+    hsl(344, 31%, 90%) 100%
+  );
 
-	--light-theme-color: #fff;
+  --light-theme-color: #fff;
 
-	/* FONTS */
-	--primary-font-family: 'Raleway', sans-serif;
-	--secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
-		'Arial Narrow', sans-serif;
-	--base-font-size: 18px;
-	--base-line-height: 1.4;
+  /* FONTS */
+  --primary-font-family: "Raleway", sans-serif;
+  --secondary-font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow",
+    sans-serif;
+  --base-font-size: 18px;
+  --base-line-height: 1.4;
 
-	/* OTHERS */
-	--content-width: 45rem;
-	--dropdown-symbol-width: 0.9em;
+  /* OTHERS */
+  --content-width: 45rem;
+  --dropdown-symbol-width: 0.9em;
 }
 
 /**
@@ -34,51 +36,63 @@
  * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
  **/
 
- @custom-media --narrow-menu-query screen and (max-width: 699px);
- @custom-media --wide-menu-query screen and (min-width: 700px);
- @custom-media --content-query screen and (min-width: 48em);
- @custom-media --sidebar-query screen and (min-width: 60em);
- @custom-media --mobile screen and (max-width: 700px);
- @custom-media --desktop screen and (min-width: 1000px);
- 
-section {
-	padding: 0 3em 3em;
-	border-top: 1px solid var(--primary-color);
+@custom-media --narrow-menu-query screen and (max-width: 699px);
+@custom-media --wide-menu-query screen and (min-width: 700px);
+@custom-media --content-query screen and (min-width: 48em);
+@custom-media --sidebar-query screen and (min-width: 60em);
+@custom-media --mobile screen and (max-width: 700px);
+@custom-media --desktop screen and (min-width: 1000px);
+
+html {
+  scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-#hero-unit{
+section {
+  padding: 0 3em 3em;
+  border-top: 1px solid var(--primary-color);
+}
+
+#hero-unit {
   padding: 0;
 }
 
 @media (--mobile) {
-	section {
-		padding: 0 0.35em 3em;
-		& h1 {
-			font-size: 2.2em;
-		}
-	}
+  section {
+    padding: 0 0.35em 3em;
+    & h1 {
+      font-size: 2.2em;
+    }
+  }
 }
 .section-header {
-	text-align: center;
-	padding: 0;
+  text-align: center;
+  padding: 0;
 }
 
 #hero-unit .section-header {
-	color: white;
-	text-shadow: 2px 3px 4px #000;
+  color: white;
+  text-shadow: 2px 3px 4px #000;
 }
 
-a, a:hover, a:active, a:focus {
+a,
+a:hover,
+a:active,
+a:focus {
   text-decoration: none;
   background: none;
 }
 
-#custom_html-2 a:hover{
+#custom_html-2 a:hover {
   color: white;
 }
 
 #custom_html-2 i {
-  padding-right: .35em;
+  padding-right: 0.35em;
   vertical-align: middle;
 }
 
@@ -92,10 +106,10 @@ input,
 select,
 optgroup,
 textarea {
-	color: var(--primary-dark);
-	font-family: var(--primary-font-family);
-	font-size: var(--base-font-size);
-	line-height: 1.4;
+  color: var(--primary-dark);
+  font-family: var(--primary-font-family);
+  font-size: var(--base-font-size);
+  line-height: 1.4;
 }
 
 h1,
@@ -104,35 +118,35 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 0.25em;
-	line-height: 1;
+  margin-bottom: 0.25em;
+  line-height: 1;
 }
 h1 {
-	font-family: var(--secondary-font-family);
-	font-size: calc(var(--base-font-size) * 3);
-	font-weight: 700;
+  font-family: var(--secondary-font-family);
+  font-size: calc(var(--base-font-size) * 3);
+  font-weight: 700;
 }
 h2 {
-	font-family: var(--primary-font-family);
-	font-size: calc(var(--base-font-size) * 1.5);
-	font-weight: 600;
+  font-family: var(--primary-font-family);
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-weight: 600;
 }
 h3 {
-	font-family: var(--primary-font-family);
-	font-size: calc(var(--base-font-size) * 2);
-	font-weight: 500;
+  font-family: var(--primary-font-family);
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 500;
 }
 h4 {
-	font-family: var(--primary-font-family);
-	font-size: calc(var(--base-font-size) * 2);
-	font-weight: 500;
-	letter-spacing: -0.05em;
-	/* text-transform: uppercase; */
+  font-family: var(--primary-font-family);
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  /* text-transform: uppercase; */
 }
 h5 {
-	font-family: var(--secondary-font-family);
-	font-size: calc(var(--base-font-size) * 1.35);
-	font-weight: 500;
+  font-family: var(--secondary-font-family);
+  font-size: calc(var(--base-font-size) * 1.35);
+  font-weight: 500;
 }
 @font-face {
   font-display: swap;

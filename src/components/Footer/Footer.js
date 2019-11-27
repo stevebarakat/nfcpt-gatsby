@@ -1,5 +1,6 @@
 import React from "react"
 import './Footer.css'
+import { FaTwitter, FaFacebook, FaGooglePlus, FaYoutube, FaTags, FaPhone } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <a href="tel:904-272-4329">
             <div className="linkarea">
               <span className="icon-area">
-                <i className="fa fa-tags"></i>
+                <FaTags />
                 Get Free
               </span>
               <strong>CONSULTATION</strong>
@@ -18,7 +19,7 @@ const Footer = () => {
           <a href="tel:904-272-4329">
             <div className="linkarea">
               <span className="icon-area">
-                <i className="fa fa-tags"></i>
+                <FaPhone />
                 24hr Hotline
               </span>
               <strong>(904) 272-4329</strong>
@@ -27,7 +28,7 @@ const Footer = () => {
           <a href="#pricing-plans">
             <div className="linkarea">
               <span className="icon-area">
-                <i className="fa fa-tags"></i>
+              <FaTags />
                 View Our
               </span>
               <strong>SAVINGS PLANS</strong>
@@ -61,7 +62,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <a href="https://google.com" title="Join us on Google Plus">
-                    <i className="fab fa-google fa-2x"></i>Google+
+                    <FaGooglePlus />Google+
                   </a>
                 </li>
                 <li>
@@ -69,7 +70,7 @@ const Footer = () => {
                     href="https://www.facebook.com/northfloridachiropracticphysicaltherapy/"
                     title="Join us on Facebook"
                   >
-                    <i className="fab fa-facebook-square fa-2x"></i>Facebook
+                    <FaFacebook />Facebook
                   </a>
                 </li>
                 <li>
@@ -77,7 +78,7 @@ const Footer = () => {
                     href="https://twitter.com/nflchiropractic"
                     title="Join us on Twitter"
                   >
-                    <i className="fab fa-twitter-square fa-2x"></i>Twitter
+                    <FaTwitter />Twitter
                   </a>
                 </li>
                 <li>
@@ -85,7 +86,7 @@ const Footer = () => {
                     href="https://www.stevebarakat.com/"
                     title="Subscribe to our YouTube channel"
                   >
-                    <i className="fab fa-youtube fa-2x"></i>YouTube
+                    <FaYoutube />YouTube
                   </a>
                 </li>
               </ul>

@@ -21,6 +21,7 @@
     "jquery": "^3.4.1",
     "postcss": "^7.0.18",
     "postcss-cssnext": "^3.1.0",
+    "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.14",
