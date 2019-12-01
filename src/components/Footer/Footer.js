@@ -83,7 +83,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.stevebarakat.com/"
+                    href="https://www.youtube.com/"
                     title="Subscribe to our YouTube channel"
                   >
                     <FaYoutube />YouTube
@@ -125,7 +125,7 @@ const Footer = () => {
         <div className="site-info">
           <p>
             &copy; {new Date().getFullYear()} North Florida Chiropractic
-            Physical Therapy <span> | </span> Site by: <a href="http://stevebarakat.com">S.Barakat</a>
+            Physical Therapy <span> | </span> Site by: <a href="https://stevebarakat.com">S.Barakat</a>
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </p>
         </div>

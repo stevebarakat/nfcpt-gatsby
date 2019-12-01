@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `North Florida Chiropractic Physical Therapy`,
-    description: `A static Gatsby site with content pulled from Wordpress rest api.`,
+    description: `Dr. Jason Orlando — Treating and Relieving Pain in North Florida for Over 20 Years.`,
     author: `@stevebarakat`,
   },
   plugins: [
@@ -47,7 +47,7 @@ module.exports = {
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
          * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
          */
-        baseUrl: `northfloridachiropracticphysicaltherapy.com`,
+        baseUrl: `old.northfloridachiropracticphysicaltherapy.com`,
         // The protocol. This can be http or https.
         protocol: `https`,
         // Indicates whether the site is hosted on wordpress.com.
@@ -59,42 +59,11 @@ module.exports = {
         // This feature is untested for sites hosted on WordPress.com
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://northfloridachiropracticphysicaltherapy.com",
-          replacementUrl: "http://localhost:8000",
+          sourceUrl: "https://old.northfloridachiropracticphysicaltherapy.com",
+          replacementUrl: "https://northfloridachiropracticphysicaltherapy.com",
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-netlify`,
-    //   options: {
-    //     headers: {
-    //       "/html/*": [
-    //         "cache-control: public, max-age=0, must-revalidate"
-    //       ],
-    //       "/page-data/*": [
-    //         "cache-control: public, max-age=0, must-revalidate"
-    //       ],
-    //       "/app-data/*": [
-    //         "cache-control: public, max-age=0, must-revalidate"
-    //       ],
-    //       "/static/*": [
-    //         "cache-control: public, max-age=31536000, immutable"
-    //       ],
-    //       "/js/*": [
-    //         "cache-control: public, max-age=31536000, immutable"
-    //       ],
-    //       "/css/*": [
-    //         "cache-control: public, max-age=31536000, immutable"
-    //       ],
-    //     }, // option to add more headers. `Link` headers are transformed by the below criteria
-    //     allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-    //     mergeSecurityHeaders: true, // boolean to turn off the default security headers
-    //     mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-    //     mergeCachingHeaders: true, // boolean to turn off the default caching headers
-    //     transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-    //     generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-    //   },
-    // },
     `gatsby-plugin-offline`
   ],
 }

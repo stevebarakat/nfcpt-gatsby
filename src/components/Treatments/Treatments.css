@@ -1,30 +1,28 @@
 :root {
-	/* COLORS */
-	--primary-lightest: hsl(341, 32%, 87%);
-	--primary-lighter: hsl(341, 32%, 57%);
-	--primary-light: hsl(341, 32%, 37%);
-	--primary-color: hsl(341, 32%, 27%);
-	--primary-dark: hsl(341, 33%, 17%);
-	--primary-darker: hsl(344, 31%, 7%);
-	--primary-gradient: linear-gradient(
-		to bottom,
-		hsl(341, 32%, 97%) 0%,
-		hsl(341, 32%, 93%) 25%,
-		hsl(344, 31%, 90%) 100%
-	);
+  /* COLORS */
+  --primary-lightest: hsl(341, 32%, 87%);
+  --primary-lighter: hsl(341, 32%, 57%);
+  --primary-light: hsl(341, 32%, 37%);
+  --primary-color: hsl(341, 32%, 27%);
+  --primary-dark: hsl(341, 33%, 17%);
+  --primary-darker: hsl(344, 31%, 7%);
+  --primary-gradient: linear-gradient(to bottom,
+      hsl(341, 32%, 97%) 0%,
+      hsl(341, 32%, 93%) 25%,
+      hsl(344, 31%, 90%) 100%);
 
-	--light-theme-color: #fff;
+  --light-theme-color: #fff;
 
-	/* FONTS */
-	--primary-font-family: 'Raleway', sans-serif;
-	--secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
-		'Arial Narrow', sans-serif;
-	--base-font-size: 18px;
-	--base-line-height: 1.4;
+  /* FONTS */
+  --primary-font-family: 'Raleway', sans-serif;
+  --secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
+    'Arial Narrow', sans-serif;
+  --base-font-size: 18px;
+  --base-line-height: 1.4;
 
-	/* OTHERS */
-	--content-width: 45rem;
-	--dropdown-symbol-width: 0.9em;
+  /* OTHERS */
+  --content-width: 45rem;
+  --dropdown-symbol-width: 0.9em;
 }
 
 /**
@@ -34,68 +32,73 @@
  * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
  **/
 
- @custom-media --narrow-menu-query screen and (max-width: 699px);
- @custom-media --wide-menu-query screen and (min-width: 700px);
- @custom-media --content-query screen and (min-width: 48em);
- @custom-media --sidebar-query screen and (min-width: 60em);
- @custom-media --mobile screen and (max-width: 700px);
- @custom-media --desktop screen and (min-width: 1000px);
- 
+@custom-media --narrow-menu-query screen and (max-width: 699px);
+@custom-media --wide-menu-query screen and (min-width: 700px);
+@custom-media --content-query screen and (min-width: 48em);
+@custom-media --sidebar-query screen and (min-width: 60em);
+@custom-media --mobile screen and (max-width: 700px);
+@custom-media --desktop screen and (min-width: 1000px);
+
 
 /* TREATMENTS */
 
-.treatments>div{
+.treatments>div {
   background-size: 100%;
   background-position: top;
 }
 
 #treatments h3,
 #treatments p {
-	z-index: 999;
+  z-index: 999;
 }
 
 .treatments-list {
-	display: grid;
-	grid-template-columns: 1fr;
-	font-size: 1.5em;
-	& ul {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		text-align: center;
-		& li {
-			padding: 0.25em 0;
-		}
-	}
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 1.5em;
+
+  & ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+
+    & li {
+      padding: 0.25em 0;
+    }
+  }
 }
 
 @media (--desktop) {
-	.treatments-list {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .treatments-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.parallax-inner{
+
+.parallax-inner {
   z-index: -9999;
 }
 
-.parallax-inner>div{
-  background-size:  contain !important;
+.parallax-inner>div {
+  background-size: cover !important;
 }
 
 section {
-	padding: 0 3em 3em;
-	border-top: 1px solid var(--primary-color);
+  padding: 0 3em 3em;
+  border-top: 1px solid var(--primary-color);
 }
 
 @media (--mobile) {
-	section {
-		padding: 0 0.35em 3em;
-		& h1 {
-			font-size: 2.2em;
-		}
-	}
+  section {
+    padding: 0 0.35em 3em;
+
+    & h1 {
+      font-size: 2.2em;
+    }
+  }
 }
+
 .section-header {
-	text-align: center;
-	padding: 2.5em 0;
+  text-align: center;
+  padding: 2.5em 0;
 }
