@@ -80,7 +80,7 @@
 }
 
 .parallax-inner>div {
-  background-size: cover !important;
+  background-size: contain !important;
 }
 
 section {
@@ -89,6 +89,10 @@ section {
 }
 
 @media (--mobile) {
+  .parallax-inner>div {
+    background-size: auto !important;
+  }
+
   section {
     padding: 0 0.35em 3em;
 
