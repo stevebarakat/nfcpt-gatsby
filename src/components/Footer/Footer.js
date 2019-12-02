@@ -106,7 +106,7 @@ const Footer = () => {
                 <span
                   itemProp="address"
                   itemScope=""
-                  itemType="http://schema.org/PostalAddress"
+                  itemType="https://schema.org/PostalAddress"
                 >
                   <span itemProp="streetAddress">223 Blanding Blvd</span>
                   <br />
