@@ -49,7 +49,7 @@ module.exports = {
          */
         baseUrl: `old.northfloridachiropracticphysicaltherapy.com`,
         // The protocol. This can be http or https.
-        protocol: `https`,
+        protocol: `http`,
         // Indicates whether the site is hosted on wordpress.com.
         // If false, then the assumption is made that the site is self hosted.
         // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
@@ -59,7 +59,7 @@ module.exports = {
         // This feature is untested for sites hosted on WordPress.com
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: "http://old.northfloridachiropracticphysicaltherapy.com",
+          sourceUrl: "https://old.northfloridachiropracticphysicaltherapy.com",
           replacementUrl: "https://northfloridachiropracticphysicaltherapy.com",
         },
       },
