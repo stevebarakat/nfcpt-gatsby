@@ -11,7 +11,7 @@ const Header = () => {
   <Topbar />
   <header className="site-header">
         <Link to="/">
-        <img src="../../images/logo.png" alt="logo" />
+        <img src="/logo.png" alt="logo" />
         </Link>
         <Menu />
   </header>
