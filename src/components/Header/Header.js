@@ -11,7 +11,7 @@ const Header = () => {
   <Topbar />
   <header className="site-header">
         <Link to="/">
-        <img src="/logo.png" alt="logo" />
+        <img src="http://old.northfloridachiropracticphysicaltherapy.com/wp-content/uploads/2019/08/logo.svg" alt="logo" />
         </Link>
         <Menu />
   </header>
