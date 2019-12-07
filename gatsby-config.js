@@ -59,8 +59,8 @@ module.exports = {
         // This feature is untested for sites hosted on WordPress.com
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://old.northfloridachiropracticphysicaltherapy.com",
-          replacementUrl: "https://northfloridachiropracticphysicaltherapy.com",
+          sourceUrl: "http://old.northfloridachiropracticphysicaltherapy.com",
+          replacementUrl: "https://www.northfloridachiropracticphysicaltherapy.com",
         },
       },
     },
