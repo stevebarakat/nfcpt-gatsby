@@ -6,17 +6,19 @@
   --primary-color: hsl(341, 32%, 27%);
   --primary-dark: hsl(341, 33%, 17%);
   --primary-darker: hsl(344, 31%, 7%);
-  --primary-gradient: linear-gradient(to bottom,
-      hsl(341, 32%, 97%) 0%,
-      hsl(341, 32%, 93%) 25%,
-      hsl(344, 31%, 90%) 100%);
+  --primary-gradient: linear-gradient(
+    to bottom,
+    hsl(341, 32%, 97%) 0%,
+    hsl(341, 32%, 93%) 25%,
+    hsl(344, 31%, 90%) 100%
+  );
 
   --light-theme-color: #fff;
 
   /* FONTS */
-  --primary-font-family: 'Raleway', sans-serif;
-  --secondary-font-family: 'Roboto Condensed', 'Helvetica Neue',
-    'Arial Narrow', sans-serif;
+  --primary-font-family: "Raleway", sans-serif;
+  --secondary-font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow",
+    sans-serif;
   --base-font-size: 18px;
   --base-line-height: 1.4;
 
@@ -39,10 +41,9 @@
 @custom-media --mobile screen and (max-width: 700px);
 @custom-media --desktop screen and (min-width: 1000px);
 
-
 /* TREATMENTS */
 
-.treatments>div {
+.treatments > div {
   background-size: 100%;
   background-position: top;
 }
@@ -79,7 +80,7 @@
   z-index: -9999;
 }
 
-.parallax-inner>div {
+.parallax-inner > div {
   background-size: contain !important;
 }
 
@@ -89,8 +90,8 @@ section {
 }
 
 @media (--mobile) {
-  .parallax-inner>div {
-    background-size: auto !important;
+  .parallax-inner > div {
+    background-size: 200vh !important;
   }
 
   section {

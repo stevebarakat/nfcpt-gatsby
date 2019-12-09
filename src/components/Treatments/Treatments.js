@@ -2,7 +2,7 @@ import React from 'react'
 import { ParallaxBanner } from 'react-scroll-parallax';
 import Tagline from './Tagline'
 import './Treatments.css'
-import  treatments from './treatments.jpg'
+import  treatments from '../../images/treatments.jpg'
 
 const Treatments = () => {
   return(
