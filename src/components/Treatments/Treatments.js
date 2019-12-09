@@ -9,7 +9,7 @@ const Treatments = () => {
     <ParallaxBanner
     layers={[
         {
-            image: {treatments},
+            image: './treatments.jpg',
             amount: 1,
         },
     ]}
