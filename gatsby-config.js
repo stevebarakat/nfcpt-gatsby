@@ -47,7 +47,7 @@ module.exports = {
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
          * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
          */
-        baseUrl: `old.northfloridachiropracticphysicaltherapy.com`,
+        baseUrl: `northfloridachiropracticphysicaltherapy.com`,
         // The protocol. This can be http or https.
         protocol: `http`,
         // Indicates whether the site is hosted on wordpress.com.
@@ -59,8 +59,8 @@ module.exports = {
         // This feature is untested for sites hosted on WordPress.com
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: "http://old.northfloridachiropracticphysicaltherapy.com",
-          replacementUrl: "https://www.northfloridachiropracticphysicaltherapy.com",
+          sourceUrl: "https://northfloridachiropracticphysicaltherapy.com",
+          replacementUrl: "https://northfloridachiropracticphysicaltherapy.netlify.com",
         },
       },
     },

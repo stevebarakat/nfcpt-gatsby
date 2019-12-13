@@ -93,6 +93,10 @@ section {
   .parallax-inner > div {
     background-size: 200vh !important;
   }
+  .parallax-inner,
+  .parallax-outer {
+    position: absolute !important;
+  }
 
   section {
     padding: 0 0.35em 3em;

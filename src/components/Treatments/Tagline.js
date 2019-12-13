@@ -3,7 +3,7 @@ import './Treatments.css'
 
 
 const Tagline = () => (
-  <section id=" treatments">
+  <>
               <div className="section-header">
                 <h3>Injuries &amp; Conditions We Treat</h3>
                 We diagnose and treat pain related to work, sports, auto-accidents, and more.
@@ -30,7 +30,7 @@ const Tagline = () => (
                   <li>Senior Car Accident Care</li>
                 </ul>
               </div>
-            </section>
+            </>
 )
 
 export default Tagline
