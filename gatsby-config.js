@@ -33,6 +33,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-google-places`,
+      options: {
+        placeId: "ChIJU_OKSH_D5YgRFLhOcB3Ru1c",
+        apiKey: "AIzaSyCZNXNCNGCISImN_bupjPe-pZft6y7pkxw"
+      }
+    },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         includedRoutes: ["/*/*/pages", "/*/*/media", "/*/*/menus"],

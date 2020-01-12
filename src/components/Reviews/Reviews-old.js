@@ -1,30 +1,33 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useEffect, useState } from "react"
 import "./Reviews.css"
-// import "./variables.css"
 
 const Reviews = () => {
-  const data = useStaticQuery(graphql`
-    query ReviewQuery {
-      allGooglePlacesReview {
-        edges {
-          node {
-            author_name
-            author_url
-            profile_photo_url
-            rating
-            text
-            relative_time_description
-          }
-        }
-      }
-    }
-  `)
+  const [state, setState] = useState({
+    reviews: [],
+    reviewsContent: [],
+  })
+  const url =
+    "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJU_OKSH_D5YgRFLhOcB3Ru1c&fields=name,reviews,rating,formatted_phone_number&key=AIzaSyCZNXNCNGCISImN_bupjPe-pZft6y7pkxw"
 
-  console.log(data.allGooglePlacesReview.edges)
+  async function getData() {
+    const response = await fetch(url)
+    const data = await response.json()
+    const reviews = data.result.reviews
+    let reviewsContent = []
+    reviews.map(review => reviewsContent.push(review.text))
+    for (let i = 0; i < reviewsContent.length; i++) {
+      setState({
+        reviews: reviews,
+        reviewsContent: reviewsContent,
+      })
+    }
+  }
+  useEffect(() => {
+    getData()
+  }, [])
 
   const shortenString = string => {
-    let str = ""
+    let str = '';
     if (string.length > 125) {
       str = string.slice(0, 125)
     } else {
@@ -33,6 +36,12 @@ const Reviews = () => {
     return str
   }
 
+  const readMore = e => {
+    e.preventDefault()
+    console.log(e.target.parentNode.id)
+    e.target.parentElement.innerHTML =
+      state.reviewsContent[e.target.parentNode.id]
+  }
   return (
     <section id="reviews">
       <div className="section-header">
@@ -40,25 +49,20 @@ const Reviews = () => {
         <p>Hear what others have to say.</p>
       </div>
       <div id="reviews-container">
-        {data.allGooglePlacesReview.edges.map((review, i) => {
-          const readMore = e => {
-            e.preventDefault()
-            console.log(e.target.parentNode)
-            e.target.parentElement.innerHTML = review.node.text
-          }
-          const str = review.node.text
+        {state.reviews.map((review, i) => {
+          const str = review.text
           const shortStr = shortenString(str)
           return (
             <div key={i} className="review-container">
               <div className="review-meta">
                 <img
                   className="profile-photo"
-                  src={review.node.profile_photo_url}
+                  src={review.profile_photo_url}
                   alt=""
                 />
               </div>
               <div className="review-details">
-                <div className="author-name">{review.node.author_name}</div>
+                <div className="author-name">{review.author_name}</div>
                 <div className="review-date">
                   {review.relative_time_description}
                 </div>

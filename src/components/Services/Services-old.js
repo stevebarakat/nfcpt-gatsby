@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import './Services.css'
-import "./variables.css"
+// import "./variables.css"
 
 const Services = () => (
   <StaticQuery
