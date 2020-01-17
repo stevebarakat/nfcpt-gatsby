@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        // includedRoutes: ["/*/*/pages", "/*/*/media", "/*/*/menus"],
+        includedRoutes: ["/*/*/pages", "/*/*/media", "/*/*/menus"],
         excludedRoutes: [
           "/*/*/categories",
           "/*/*/posts",
