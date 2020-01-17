@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `North Florida Chiropractic Physical Therapy`,
-    description: `Dr. Jason Orlando — Treating and Relieving Pain in North Florida for Over 20 Years.`,
+    titleTemplate: "%s · North Florida Chiropractic Physical Therapy",
+    description: `Orange Park Chiropractor Dr. Jason Orlando — Treating and Relieving Pain in North Florida for Over 20 Years.`,
+    url: "https://northfloridachiropracticphysicaltherapy.com/",
     author: `@stevebarakat`,
   },
   plugins: [
