@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `North Florida Chiropractic Physical Therapy`,
+    title: `Orange Park Chiropractor | North Florida Chiropractic Physical Therapy`,
     titleTemplate: "%s · North Florida Chiropractic Physical Therapy",
-    description: `Orange Park Chiropractor Dr. Jason Orlando — Treating and Relieving Pain in North Florida for Over 20 Years.`,
+    description: `Orange Park Chiropractor, Dr. Jason Orlando's chiropractic team relieves back, neck, spine pain, accident recovery, work / sports injuries - (904) 272-4329`,
     url: "https://northfloridachiropracticphysicaltherapy.com/",
     author: `@stevebarakat`,
   },

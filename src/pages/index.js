@@ -13,7 +13,7 @@ import Reviews from '../components/Reviews/Reviews'
 export default ({ data }) => {
   return (
     <Layout>
-    <SEO title="Orange Park Chiropractor" />    
+    <SEO title="Orange Park Chiropractor | North Florida Chiropractic Physical Therapy" />    
       <HeroUnit />
       <Services />
       <Treatments />
