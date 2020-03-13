@@ -1,7 +1,6 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
 import spa from '../../images/spa.jpg'
-import HeroUnitStyles from './HeroUnit.module.css'
 
 const HeroUnit = () => {
   return (
