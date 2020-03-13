@@ -7,7 +7,7 @@ const HeroUnit = () => {
     <section id="hero-unit" >
         <LazyHero 
           imageSrc={spa}
-          opacity={0}
+          opacity={.1}
           parallaxOffset={75}
           className="parallax"
           minHeight="400px"

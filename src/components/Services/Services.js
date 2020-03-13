@@ -1,6 +1,5 @@
 import React from "react"
 import { FaStethoscope, FaHands, FaCarCrash, FaHeartbeat } from 'react-icons/fa'
-import './Services.css'
 
 const Services = () => (
   <section id="services">
