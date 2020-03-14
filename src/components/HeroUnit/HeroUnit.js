@@ -1,25 +1,26 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
+import spa from './spa.jpg';
 
 const HeroUnit = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(childImageSharp: {fluid: {src: {regex: "/spa/"}}}) {
-        id
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-    }
-  `)
-  console.log(data.file.childImageSharp.fluid.src)
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     file(childImageSharp: {fluid: {src: {regex: "/spa/"}}}) {
+  //       id
+  //       childImageSharp {
+  //         fluid {
+  //           src
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // console.log(data.file.childImageSharp.fluid.src)
   return (
     <section id="hero-unit" >
         <LazyHero 
-          imageSrc="https://bodyinbalanceny.com/wp-content/uploads/2016/03/newyorkcity-massage-1.jpg"
+          imageSrc={spa}
           opacity={.1}
           parallaxOffset={95}
           className="parallax"
