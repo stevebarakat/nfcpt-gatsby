@@ -15,7 +15,7 @@ const HeroUnit = () => {
       }
     }
   `)
-  console.log(data)
+  console.log(data.file.childImageSharp.fluid.src)
   return (
     <section id="hero-unit" >
         <LazyHero 
