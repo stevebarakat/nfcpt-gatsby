@@ -1,14 +1,27 @@
 import React from 'react';
 import LazyHero from 'react-lazy-hero';
-import spa from '../../images/spa.jpg'
+import { useStaticQuery, graphql } from "gatsby"
 
 const HeroUnit = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(childImageSharp: {fluid: {src: {regex: "/spa/"}}}) {
+        id
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <section id="hero-unit" >
         <LazyHero 
-          imageSrc={spa}
+          imageSrc={data.file.childImageSharp.fluid.src}
           opacity={.1}
-          parallaxOffset={75}
+          parallaxOffset={95}
           className="parallax"
           minHeight="400px"
         >
