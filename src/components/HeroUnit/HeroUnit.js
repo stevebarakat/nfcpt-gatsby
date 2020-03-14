@@ -19,7 +19,7 @@ const HeroUnit = () => {
   return (
     <section id="hero-unit" >
         <LazyHero 
-          imageSrc={data.file.childImageSharp.fluid.src}
+          imageSrc="https://bodyinbalanceny.com/wp-content/uploads/2016/03/newyorkcity-massage-1.jpg"
           opacity={.1}
           parallaxOffset={95}
           className="parallax"
