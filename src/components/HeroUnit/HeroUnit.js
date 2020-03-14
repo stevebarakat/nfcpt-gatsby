@@ -30,8 +30,6 @@ const HeroUnit = () => {
               <p className="HeroUnitStyles.tagline">Dr. Jason Orlando — Treating and Relieving Pain in North Florida for Over 20 Years.</p>
             </div>
         </LazyHero>
-
-        {/* ... */}
     </section>
 );
 }
