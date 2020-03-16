@@ -124,7 +124,7 @@ const Footer = () => {
         <div className="site-info">
           <p>
             &copy; {new Date().getFullYear()} North Florida Chiropractic
-            Physical Therapy <span> | </span> Site by: <a href="https://stevebarakat.com">S.Barakat</a>
+            Physical Therapy <span> | </span> Powered by {' '}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </p>
         </div>

@@ -57,7 +57,6 @@ html {
 
 section {
   padding: 0 3em 3em;
-  border-top: 1px solid var(--primary-color);
 }
 
 #hero-unit {
@@ -87,7 +86,6 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: none;
-  background: none;
 }
 
 #custom_html-2 a:hover {
@@ -158,14 +156,6 @@ h5 {
 
 
 /* HEADER */
-
-.site-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: stretch;
-  padding: 0.5em 3em 0.5em;
-}
-
 /************************************
 Main Menu
  ***********************************/
@@ -389,72 +379,6 @@ Main Menu
   }
 }
 
-
-/* TREATMENTS */
-
-.treatments > div {
-  background-size: 100%;
-  background-position: top;
-}
-
-#treatments h3,
-#treatments p {
-  z-index: 999;
-}
-
-.treatments-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  font-size: 1.5em;
-
-  & ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-align: center;
-
-    & li {
-      padding: 0.25em 0;
-    }
-  }
-}
-
-@media (--desktop) {
-  .treatments-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.parallax-inner {
-  z-index: -9999;
-}
-
-.parallax-inner > div {
-  background-size: contain !important;
-}
-
-section {
-  padding: 0 3em 3em;
-  border-top: 1px solid var(--primary-color);
-}
-
-@media (--mobile) {
-  .parallax-inner > div {
-    background-size: 200vh !important;
-  }
-  .parallax-inner,
-  .parallax-outer {
-    position: absolute !important;
-  }
-
-  section {
-    padding: 0 0.35em 3em;
-
-    & h1 {
-      font-size: 2.2em;
-    }
-  }
-}
 
 .section-header {
   text-align: center;
@@ -734,4 +658,8 @@ section {
   padding: 0 ;
   margin: 0 ;
   background-color: #ededee;
+}
+
+.nfcpt-bg-dark{
+  background: var(--primary-dark);
 }
