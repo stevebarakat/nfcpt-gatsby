@@ -601,59 +601,6 @@ Main Menu
 }
 
  
- /*--------------------------------------------------------------
-# SERVICES
---------------------------------------------------------------*/
-
-#services {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1.5em;
-	padding-top: 2em;
-	text-align: center;
-}
-
-.service a {
-	text-decoration: none;
-	color: var(--primary-dark);
-	& .service-icon {
-		font-size: 5em;
-		transition: all 0.25s;
-		color: var(--primary-color);
-	}
-	& .service-icon:hover {
-		font-size: 5.2em;
-		color: var(--primary-light);
-	}
-	& h2 {
-		color: var(--primary-color);
-	}
-	& p {
-		color: var(--primary-light);
-	}
-}
-
-@media (--desktop) {
-	#services {
-		grid-template-columns: repeat(4, 1fr);
-  }
-  .parallax>div{
-    background-size: 100%;
-  }
-}
-.parallax>div{
-  background-size: cover;
-  background-position: top;
-}
-@media (--mobile) {
-	#services {
-		grid-template-columns: 1fr;
-  }
-  .parallax>div{
-    background-size: cover;
-    background-position: top;
-  }
-}
 #directions{
   padding: 0 ;
   margin: 0 ;
@@ -662,4 +609,10 @@ Main Menu
 
 .nfcpt-bg-dark{
   background: var(--primary-dark);
+}
+
+#pricing-plans{
+  background: url("../components/PricingPlans/spa.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }

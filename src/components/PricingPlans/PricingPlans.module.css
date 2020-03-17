@@ -1,0 +1,176 @@
+:root {
+  /* COLORS */
+  --primary-opacity-dark: hsla(210, 55%, 8%, .95);
+  --primary-opacity-light: hsla(348, 24%, 92%, 0.5);
+
+  --theme-color-white: #ffffff;
+
+  --primary-light: hsl(211, 54%, 28%);
+  --primary-color: hsl(211, 54%, 18%);
+  --primary-dark: hsl(210, 55%, 8%);
+
+  --primary-gradient: linear-gradient(
+    to bottom,
+    hsl(240, 33%, 97%) 0%,
+    hsl(245, 33%, 93%) 25%,
+    hsl(240, 29%, 90%) 100%
+  );
+
+  /* FONTS */
+  --primary-font-family: "Raleway", sans-serif;
+  --secondary-font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow",
+    sans-serif;
+  --base-font-size: 18px;
+  --base-line-height: 1.4;
+
+  /* OTHERS */
+  --content-width: 45rem;
+  --dropdown-symbol-width: 0.9em;
+}
+
+/**
+ * Custom Media Queries
+ * Works like Custom Properties, except for media queries.
+ *
+ * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ **/
+
+@custom-media --narrow-menu-query screen and (max-width: 699px);
+@custom-media --wide-menu-query screen and (min-width: 700px);
+@custom-media --content-query screen and (min-width: 48em);
+@custom-media --sidebar-query screen and (min-width: 60em);
+@custom-media --mobile screen and (max-width: 700px);
+@custom-media --desktop screen and (min-width: 1000px);
+/*--------------------------------------------------------------
+# PRICING
+--------------------------------------------------------------*/
+
+.plans-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5em;
+  font-size: 1.25em;
+}
+
+.plan,
+.plans {
+  transition: all 0.25s;
+  border: 1px solid transparent;
+}
+
+@media (--mobile) {
+  .plan .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.plans {
+  color: #fff;
+  background: var(--primary-opacity-dark);
+  border: 1px solid #FFF;
+  padding: 1em;
+  box-shadow: var(--primary-opacity-dark) 0 2px 5px;
+  border-radius: 8px;
+
+  & h4 {
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 0.5em 0;
+    font-size: 1em;
+  }
+}
+
+.plan {
+  text-align: center;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.3em;
+  margin: 1em 0.5em;
+  box-shadow: 0 0 0;
+  border-bottom: 1px solid #FFF;
+  & span {
+    display: block;
+  }
+}
+/* 
+.plan:hover {
+  border: 1px solid black;
+}
+
+.plan:nth-child(1n) {
+  background: hsla(341, 32%, 27%, 0.15);
+}
+.plan:nth-child(2n) {
+  background: hsla(341, 32%, 27%, 0.25);
+} */
+
+.sticker-wrap {
+  font-size: 0.55em;
+  height: 5.5em;
+  width: 5.5em;
+  position: relative;
+  margin: 0 1em;
+}
+
+.sticker-stroke {
+  background: #fff;
+  height: 6.1em;
+  width: 6.1em;
+  border-radius: 90%;
+  position: absolute;
+  top: -0.3em;
+  left: -0.3em;
+  z-index: 1;
+}
+
+.sticker {
+  height: 5.5em;
+  width: 5.5em;
+  border-radius: 90%;
+  text-align: center;
+  position: absolute;
+  z-index: 5;
+  background: #FA3200;
+}
+
+.save {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.7em;
+  position: relative;
+  top: 0.85em;
+  line-height: 0.85em;
+}
+
+.strike {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.new-price {
+  font-weight: 700;
+}
+.plan-length {
+  font-size: calc(var(--base-font-size) / 1.5);
+  text-align: center;
+  vertical-align: text-top;
+  white-space: nowrap;
+}
+
+@media (--desktop) {
+  .plans-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (--mobile) {
+  .plans-wrap {
+    grid-template-columns: 1fr;
+  }
+}

@@ -68,10 +68,10 @@ module.exports = {
         // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
         // This feature is untested for sites hosted on WordPress.com
         useACF: true,
-        searchAndReplaceContentUrls: {
-          sourceUrl: "https://old.northfloridachiropracticphysicaltherapy.com",
-          replacementUrl: "https://northfloridachiropracticphysicaltherapy.com",
-        },
+        // searchAndReplaceContentUrls: {
+        //   sourceUrl: "https://northfloridachiropracticphysicaltherapy.com",
+        //   replacementUrl: "https://old.northfloridachiropracticphysicaltherapy.com",
+        // },
       },
     },
     `gatsby-plugin-offline`
