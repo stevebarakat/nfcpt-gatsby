@@ -11149,6 +11149,11 @@ react-overlays@^2.1.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-owl-carousel2@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-owl-carousel2/-/react-owl-carousel2-0.3.0.tgz#8a4daec35c4bf7d682f39c3c17d309a1ad31d793"
+  integrity sha512-f6RYdNn7BD3npMfS7d88utPMfje8qsAKAftUtQ0F9imjvKHtTngP013mdqOcllsJ/75f4/uu2vA14kVBwUvEZA==
+
 react-reconciler@^0.24.0:
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.24.0.tgz#5a396b2c2f5efe8554134a5935f49f546723f2dd"

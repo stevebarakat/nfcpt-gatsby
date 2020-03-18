@@ -1,0 +1,19 @@
+.testimonials ul{
+  background: red;
+  min-height: 350px;
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid #000;
+  position: relative;
+}
+.testimonials li{
+  position: absolute;
+  list-style: none;
+  /* display: block; */
+  border: 1px solid #000;
+  width: 280px;
+  height: 315px;
+}
+

@@ -8,7 +8,8 @@ import HeroUnit from '../components/HeroUnit/HeroUnit'
 import Services from '../components/Services/Services'
 import PricingPlans from '../components/PricingPlans/PricingPlans'
 import Map from '../components/Map/Map'
-import Reviews from '../components/Reviews/Reviews'
+// import Reviews from '../components/Reviews/Reviews'
+import Testimonials from "../components/Testimonials/Testimonials"
 
 export default ({ data }) => {
   return (
@@ -18,7 +19,8 @@ export default ({ data }) => {
       <Services />
       <Treatments />
       <PricingPlans />
-      <Reviews />
+      <Testimonials />
+      {/* <Reviews /> */}
       <Map />
     </Layout>
   )
