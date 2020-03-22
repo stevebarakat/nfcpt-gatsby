@@ -618,3 +618,23 @@ Main Menu
   background-attachment: fixed;
   background-size: cover;
 }
+
+.items{
+  width: 1200px;
+  margin: 5em auto;
+  background: pink;
+  display: flex;
+  justify-content: space-evenly;
+}
+.item{
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid #000; */
+}
+
+.testimonial{
+  list-style-type: none;
+  border: 1px solid #000;
+}
