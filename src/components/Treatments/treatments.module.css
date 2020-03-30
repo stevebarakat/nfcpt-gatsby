@@ -13,11 +13,11 @@
   left: 40vw;
 }
 .treatments ul{
-  /* width: 90vw; */
   display: flex;
   flex-wrap: wrap;
-  padding: none;
-  margin: none;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
 }
 .treatments li {
   color: #000;
@@ -25,12 +25,12 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: none;
   padding: .5em;
   margin: .5em;
 }
 
-.testimonials-image{
+.treatments img{
+  max-width: 100%;
   width: auto;
   height: auto;
 }
