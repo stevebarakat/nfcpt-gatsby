@@ -6,10 +6,8 @@ import Topbar from "./Topbar"
 import logo from './logo.png'
 
 const SiteHeader = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: stretch;
-  padding: 0.5em 3em 0.5em;
+  display: flex;
+  padding: 0.5em;
 `
 
 const Header = () => {
@@ -18,7 +16,7 @@ const Header = () => {
   <Topbar />
   <SiteHeader>
         <Link to="/">
-        <img src={logo} alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
         </Link>
         <Menu />
   </SiteHeader>

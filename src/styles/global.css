@@ -161,6 +161,14 @@ body{
 /************************************
 Main Menu
  ***********************************/
+ .logo{
+   max-width: 100%;
+ }
+ @media (--mobile) {
+   .logo{
+     max-width: 80%;
+   }
+ }
 .navbar-nav a {
   font-family: Raleway, sans-serif;
   font-weight: 500;
