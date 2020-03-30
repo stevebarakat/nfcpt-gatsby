@@ -3,13 +3,13 @@ import "../styles/reset.css"
 import "../styles/global.css"
 import SEO from "../components/seo"
 import Layout from "../components/Layout/Layout"
-// import Treatments from '../components/Treatments/Treatments'
+import Treatments from '../components/Treatments/Treatments'
+// import Testimonials from "../components/Testimonials/Testimonials"
 import Reviews from '../components/Reviews/Reviews'
 import HeroUnit from '../components/HeroUnit/HeroUnit'
 import Services from '../components/Services/Services'
 import PricingPlans from '../components/PricingPlans/PricingPlans'
 import Map from '../components/Map/Map'
-import Testimonials from "../components/Testimonials/Testimonials"
 
 export default ({ data }) => {
   return (
